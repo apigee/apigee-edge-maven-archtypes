@@ -1,0 +1,6 @@
+Root folder for customer :
+archive  - include all pre-sales docs, src etc
+binaries - product related binaries ex : blm or patch details
+docs     - all customer and solution documents
+src      - gateway and java application source
+test     - Test cases and scripts

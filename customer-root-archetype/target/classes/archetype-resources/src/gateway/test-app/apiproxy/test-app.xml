@@ -1,0 +1,18 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="${version}" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="test-app">
+    <ConfigurationVersion minorVersion="0" majorVersion="4"/>
+    <CreatedAt></CreatedAt>
+    <CreatedBy>admin</CreatedBy>
+    <Description></Description>
+    <DisplayName>test-app</DisplayName>
+    <LastModifiedAt></LastModifiedAt>
+    <LastModifiedBy>admin</LastModifiedBy>
+    <Policies/>
+    <ProxyEndpoints/>
+    <Resources/>
+    <TargetServers/>
+    <TargetEndpoints/>
+</APIProxy>

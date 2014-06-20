@@ -1,0 +1,15 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<AssignMessage name="assignPayload">
+<AssignTo type="response" createNew="true"/>
+<IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+
+<Set>
+    <Payload contentType="text/xml">
+        <root>this is my new payload {flow.testvar1}.. {flow.testvar2}.. {flow.testvar3}.. {flow.testvar4}</root>
+    </Payload>
+    <StatusCode>{status.code}</StatusCode>
+</Set>
+
+</AssignMessage>

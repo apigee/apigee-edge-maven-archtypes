@@ -1,0 +1,31 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="${version}" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+	<Description>Default Proxy to create flows on an API</Description>
+    <FaultRules/>
+	<Flows>
+		<Flow name="resource display name">
+			<Description>Description</Description>
+			<Request>
+			</Request>
+			<Response>
+				<Step>
+					<Name>setResponseCode</Name>
+					<FaultRules></FaultRules>
+				</Step>			
+				<Step>
+					<Name>assignPayload</Name>
+				</Step>
+			</Response>
+			<Condition>(proxy.pathsuffix MatchesPath &quot;response&quot;) and (request.verb = &quot;GET&quot;)</Condition>
+		</Flow>
+	</Flows>
+	<HTTPProxyConnection>
+		<BasePath>/test-app</BasePath>
+		<Properties/>
+		<VirtualHost>default</VirtualHost>
+	</HTTPProxyConnection>
+	<RouteRule/>
+</ProxyEndpoint>

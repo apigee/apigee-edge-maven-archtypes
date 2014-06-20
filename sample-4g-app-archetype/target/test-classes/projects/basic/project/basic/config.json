@@ -1,0 +1,47 @@
+{
+   "configurations":[
+      {
+         "name":"prod",
+
+         "policies":[
+         {
+               "name":"QuotaPolicy.xml",
+               "tokens":[
+                  {
+                     "xpath":"/Quota/Interval" ,
+                      "value":"5"
+                      },
+                   {
+                     "xpath":"/Quota/Allow/@count" ,
+                      "value":"2000"
+                      }   
+               ]
+            }
+         ],
+         "proxies":[
+         {
+               "name":"proxy.xml",
+            "tokens":[
+              {
+                     "xpath":"/ProxyEndpoint/RouteRule/URL" ,
+                      "value":"http://apigee.com"
+                      }
+               ]
+            }
+         ],
+         "targets":[
+         ]
+
+      },
+     {
+         "name":"test",
+
+         "policies":[
+         ],
+         "proxies":[
+          ] ,
+         "targets":[
+         ]
+      }
+   ]
+}
